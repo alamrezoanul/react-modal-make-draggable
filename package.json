@@ -1,0 +1,48 @@
+{
+  "name": "react-modal-make-draggable",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "draggable",
+    "component"
+  ],
+  "license": "MIT",
+  "description": "A React component to make modals draggable.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alamrezoanul/react-modal-make-draggable.git"
+  },
+  "author": {
+    "name": "Md Rezoanul Alam",
+    "email": "alamrezoanul@gmail.com",
+    "url": "https://fluxit.tech"
+  },
+  "homepage": "https://fluxit.tech",
+  "bugs": {
+    "url": "https://github.com/alamrezoanul/react-modal-make-draggable/issues"
+  }
+}
