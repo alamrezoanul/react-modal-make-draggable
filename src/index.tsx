@@ -22,18 +22,26 @@ export const DraggableWrapper = ({ children }: DraggableWrapperProps) => {
     wrapper.style.zIndex = '1001';
 
     const handleMouseDown = (e: MouseEvent) => {
-      isDragging.current = true;
       const rect = wrapper.getBoundingClientRect();
+
+      // Remove transform on click to prevent re-jump
+      if (wrapper.style.transform === 'translate(-50%, 0)') {
+        wrapper.style.transform = 'none';
+        wrapper.style.left = `${rect.left}px`;
+        wrapper.style.top = `${rect.top}px`;
+      }
+
+      isDragging.current = true;
       offset.current = {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
       };
       wrapper.style.cursor = 'grabbing';
-      wrapper.style.transform = 'none';
 
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUp);
     };
+
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging.current) return;
